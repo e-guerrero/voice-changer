@@ -15,30 +15,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHf-mI-CgT">
-                                <rect key="frame" x="107" y="348" width="200" height="200"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="jNV-ah-8aQ"/>
-                                    <constraint firstAttribute="height" constant="200" id="qmM-Gm-Gha"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHf-mI-CgT">
+                                <rect key="frame" x="129.5" y="370.5" width="155" height="155"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Record"/>
+                                <state key="normal" image="Record"/>
                                 <connections>
-                                    <action selector="recordBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2hn-OL-hda"/>
+                                    <action selector="record:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Ol-TQ-5Lw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjy-9K-okb">
+                                <rect key="frame" x="174.5" y="590.5" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="7bp-6W-Ik6"/>
+                                    <constraint firstAttribute="width" constant="65" id="xEc-hE-X6Z"/>
+                                </constraints>
+                                <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tlx-I7-j5v"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HV1-ib-l2A">
+                                <rect key="frame" x="154" y="249.5" width="106.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="JHf-mI-CgT" firstAttribute="top" secondItem="HV1-ib-l2A" secondAttribute="bottom" constant="100" id="8IP-UX-Pyi"/>
                             <constraint firstItem="JHf-mI-CgT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EFQ-Yy-5gd"/>
+                            <constraint firstItem="HV1-ib-l2A" firstAttribute="centerX" secondItem="JHf-mI-CgT" secondAttribute="centerX" id="dSo-GH-KmT"/>
+                            <constraint firstItem="Bjy-9K-okb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e4d-Pt-8hP"/>
+                            <constraint firstItem="Bjy-9K-okb" firstAttribute="top" secondItem="JHf-mI-CgT" secondAttribute="bottom" constant="65" id="giU-iy-Dax"/>
+                            <constraint firstItem="HV1-ib-l2A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mND-t6-zEZ"/>
                             <constraint firstItem="JHf-mI-CgT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ug7-LU-5ea"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="label" destination="HV1-ib-l2A" id="WPU-lG-zbf"/>
                         <outlet property="recordBtn" destination="JHf-mI-CgT" id="cEf-Rz-ntL"/>
+                        <outlet property="stopBtn" destination="Bjy-9K-okb" id="AiJ-Au-ImA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -46,4 +64,8 @@
             <point key="canvasLocation" x="139" y="110"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Record" width="155" height="155"/>
+        <image name="Stop" width="155" height="155"/>
+    </resources>
 </document>

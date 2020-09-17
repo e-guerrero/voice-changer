@@ -11,31 +11,27 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var recordBtn: UIButton!
-    var recording: Bool = false
+    @IBOutlet weak var stopBtn: UIButton!
+    @IBOutlet weak var label: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Make record button round
-        recordBtn.layer.cornerRadius = recordBtn.layer.bounds.height/2
+        stopBtn.isEnabled = false
     }
     
-    @IBAction func recordBtnPressed(_ sender: Any) {
-        if !recording {
-            // Start Recording
-            recording = true
-            print("Recording...")
-            // Prep for stopping
-            recordBtn.backgroundColor = UIColor.systemRed
-            recordBtn.setTitle("Stop", for: .normal)
-        } else {
-            // Stop Recording
-            recording = false
-            print("Recording Stopped.")
-            // Prep for recording
-            recordBtn.backgroundColor = UIColor.systemGreen
-            recordBtn.setTitle("Record", for: .normal)
-        }
+    @IBAction func record(_ sender: Any) {
+        print("Record button pressed")
+        label.text = "Recording in Progress"
+        recordBtn.isEnabled = false
+        stopBtn.isEnabled = true
     }
-
+    
+    @IBAction func stop(_ sender: Any) {
+        print("Stop button pressed")
+        label.text = "Tap to Record"
+        stopBtn.isEnabled = false
+        recordBtn.isEnabled = true
+    }
+    
 }
 
