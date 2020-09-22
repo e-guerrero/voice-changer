@@ -10,11 +10,15 @@ import AVFoundation
 
 extension PlayAudioViewController: AVAudioPlayerDelegate {
     
+    // MARK: Alerts
+    
     struct Alerts {
         static let DismissAlert = "Dismiss"
         static let AudioFileError = "Audio File Error"
         static let AudioEngineError = "Audio Engine Error"
     }
+    
+    // MARK: PlayingState
     
     enum PlayingState { case playing, notPlaying }
     
@@ -101,7 +105,7 @@ extension PlayAudioViewController: AVAudioPlayerDelegate {
         audioPlayerNode.play()
     }
     
-    @objc func stopAudio() {
+    func stopAudio() {
         
         if let audioPlayerNode = audioPlayerNode {
             audioPlayerNode.stop()
@@ -110,13 +114,13 @@ extension PlayAudioViewController: AVAudioPlayerDelegate {
         if let stopTimer = stopTimer {
             stopTimer.invalidate()
         }
-        
-        configureUI(.notPlaying)
                         
         if let audioEngine = audioEngine {
             audioEngine.stop()
             audioEngine.reset()
         }
+        
+        configureUI(.notPlaying)
     }
     
     // MARK: Connect List of Audio Nodes

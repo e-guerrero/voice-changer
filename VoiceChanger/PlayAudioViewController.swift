@@ -11,6 +11,8 @@ import AVFoundation
 
 class PlayAudioViewController: UIViewController {
     
+    enum ButtonType: Int { case slow = 0, fast, high, low, echo, reverb }
+    
     @IBOutlet weak var slowBtn: UIButton!
     @IBOutlet weak var fastBtn: UIButton!
     @IBOutlet weak var highBtn: UIButton!
@@ -25,30 +27,6 @@ class PlayAudioViewController: UIViewController {
     var audioPlayerNode: AVAudioPlayerNode!
     var stopTimer: Timer!
     
-    enum ButtonType: Int { case slow = 0, fast, high, low, echo, reverb }
-
-    @IBAction func playAudioBtnPressed(_ sender: UIButton){
-        switch(ButtonType(rawValue: sender.tag)!) {
-        case .slow:
-            playAudio(rate: 0.5)
-        case .fast:
-            playAudio(rate: 1.5)
-        case .high:
-            playAudio(pitch: 1000)
-        case .low:
-            playAudio(pitch: -1000)
-        case .echo:
-            playAudio(echo: true)
-        case .reverb:
-            playAudio(reverb: true)
-        }
-        configureUI(.playing)
-    }
-    
-    @IBAction func stopAudioBtnPressed(_ sender: AnyObject){
-        stopAudio()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureUI(.notPlaying)
@@ -57,5 +35,29 @@ class PlayAudioViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudio()
+    }
+    
+    // MARK: Buttons
+
+    @IBAction func playAudioBtnPressed(_ sender: UIButton) {
+        configureUI(.playing)
+        switch(ButtonType(rawValue: sender.tag)!) {
+            case .slow:
+                playAudio(rate: 0.5)
+            case .fast:
+                playAudio(rate: 1.5)
+            case .high:
+                playAudio(pitch: 1000)
+            case .low:
+                playAudio(pitch: -1000)
+            case .echo:
+                playAudio(echo: true)
+            case .reverb:
+                playAudio(reverb: true)
+        }
+    }
+    
+    @IBAction func stopAudioBtnPressed(_ sender: AnyObject){
+        stopAudio()
     }
 }
