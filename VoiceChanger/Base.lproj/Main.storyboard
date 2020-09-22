@@ -88,8 +88,11 @@
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="playAudioBtnPressed:" destination="6WS-Tu-0cj" eventType="touchUpInside" id="9OK-cg-blj"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECY-di-ZCw" userLabel="Fast Button">
+                                            <button opaque="NO" tag="1" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECY-di-ZCw" userLabel="Fast Button">
                                                 <rect key="frame" x="191" y="0.0" width="191" height="207.5"/>
                                                 <state key="normal" image="Fast"/>
                                                 <userDefinedRuntimeAttributes>
@@ -97,13 +100,16 @@
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="playAudioBtnPressed:" destination="6WS-Tu-0cj" eventType="touchUpInside" id="1O4-wl-5Ae"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aBg-dB-cbr">
                                         <rect key="frame" x="0.0" y="207.5" width="382" height="207"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNK-eN-XvA" userLabel="High Pitch Button">
+                                            <button opaque="NO" tag="2" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNK-eN-XvA" userLabel="High Pitch Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="191" height="207"/>
                                                 <state key="normal" image="HighPitch"/>
                                                 <userDefinedRuntimeAttributes>
@@ -111,8 +117,11 @@
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="playAudioBtnPressed:" destination="6WS-Tu-0cj" eventType="touchUpInside" id="65f-he-hOd"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSg-A6-FX4" userLabel="Low Pitch Button">
+                                            <button opaque="NO" tag="3" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSg-A6-FX4" userLabel="Low Pitch Button">
                                                 <rect key="frame" x="191" y="0.0" width="191" height="207"/>
                                                 <state key="normal" image="LowPitch"/>
                                                 <userDefinedRuntimeAttributes>
@@ -120,13 +129,16 @@
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="playAudioBtnPressed:" destination="6WS-Tu-0cj" eventType="touchUpInside" id="m56-ao-Bnc"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1iu-bE-ZIL">
                                         <rect key="frame" x="0.0" y="414.5" width="382" height="207.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXU-fU-cE3" userLabel="Echo Button">
+                                            <button opaque="NO" tag="4" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXU-fU-cE3" userLabel="Echo Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="191" height="207.5"/>
                                                 <state key="normal" image="Echo"/>
                                                 <userDefinedRuntimeAttributes>
@@ -134,8 +146,11 @@
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="playAudioBtnPressed:" destination="6WS-Tu-0cj" eventType="touchUpInside" id="W3V-Ly-3Lh"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvh-3F-M6D" userLabel="Reverb Button">
+                                            <button opaque="NO" tag="5" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvh-3F-M6D" userLabel="Reverb Button">
                                                 <rect key="frame" x="191" y="0.0" width="191" height="207.5"/>
                                                 <state key="normal" image="Reverb"/>
                                                 <userDefinedRuntimeAttributes>
@@ -143,6 +158,9 @@
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="playAudioBtnPressed:" destination="6WS-Tu-0cj" eventType="touchUpInside" id="gpm-rC-Amh"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -155,6 +173,9 @@
                                     <constraint firstAttribute="width" constant="70" id="wVd-01-706"/>
                                 </constraints>
                                 <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="stopAudioBtnPressed:" destination="6WS-Tu-0cj" eventType="touchUpInside" id="Y5T-a4-A7t"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bcf-S0-Am0"/>
@@ -169,6 +190,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gKe-t2-6nO"/>
+                    <connections>
+                        <outlet property="echoBtn" destination="ZXU-fU-cE3" id="4ey-WL-7CA"/>
+                        <outlet property="fastBtn" destination="ECY-di-ZCw" id="e1J-mG-geD"/>
+                        <outlet property="highBtn" destination="kNK-eN-XvA" id="bXh-H2-I2Y"/>
+                        <outlet property="lowBtn" destination="CSg-A6-FX4" id="4bJ-zp-nQi"/>
+                        <outlet property="reverbBtn" destination="Lvh-3F-M6D" id="WWv-ZS-OhW"/>
+                        <outlet property="slowBtn" destination="Udd-Xj-Sac" id="w0n-bb-wNN"/>
+                        <outlet property="stopBtn" destination="mog-AJ-SHv" id="jz7-t3-EDW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwq-yb-od9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
